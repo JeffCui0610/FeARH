@@ -19,7 +19,7 @@ from sklearn.model_selection import train_test_split
 import keras
 import keras.backend as K
 from keras import regularizers
-import NN_GA as ga
+import FeARH_lib as ga
 from mia.estimators import ShadowModelBundle, AttackModelBundle, prepare_attack_data
 from sklearn.metrics import roc_auc_score,average_precision_score
 
