@@ -83,6 +83,14 @@ def shuffleData(x,y):
     print('data shuffle done')
     return X,Y
 
+def selectDataset(counterElement,X,Y,step):
+    xLocal=X[counterElement*step:((counterElement+1)*step)]
+    xLocalTrain=xLocal[0:int(step*0.8)]
+    xLocalTest=xLocal[int(step*0.8):]
+    yLocal=Y[counterElement*step:((counterElement+1)*step)]
+    yLocalTrain=yLocal[0:int(step*0.8)]
+    yLocalTest=yLocal[int(step*0.8):]
+    return xLocalTrain,xLocalTest,yLocalTrain,yLocalTest
 
 
 def averageParameter(sumDataPiece,numUnitLayer,X,numElement,numLayer,weightsGroupList,biasGroupList):
